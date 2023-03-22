@@ -15,7 +15,18 @@ public class Calculadora2{
             case '-':
                 System.out.println("subtração = "+(a-b));
                     break;
-            
+            case '*':
+                System.out.println("multiplicação = "+(a*b));
+                    break;
+            case '/':
+                System.out.println("divsão de "+a+" sobre "+b+" = "+(a/b));
+                    break;
+            case '%':
+                System.out.println("resto da divsão de "+a+" sobre "+b+" = "+(a%b));
+                    break;
+            default : 
+                System.out.println ("OPÇÃO INVALIDADA!");
+                break;
         }
 
 	}
