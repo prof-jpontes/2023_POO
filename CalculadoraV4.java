@@ -9,7 +9,7 @@
               int a = ler.nextInt();
               int b = ler.nextInt();
               System.out.println("Qual operação deseja realizar?");
-              System.out.println("+ -> Soma \n- -> SubtraçAo \n* -> MultiplicaçAo \n/ -> DivisAo \n% -> Resto \nr -> DivisAo Real \n@ -> Valor Absoluto \n^ -> PotenciaçAo \n& -> RadiciaçAo ");
+              System.out.println("+ -> Soma \n- -> SubtraçAo \n* -> MultiplicaçAo \n/ -> DivisAo \n% -> Resto \nr -> DivisAo Real \n@ -> Valor Absoluto \n^ -> PotenciaçAo \n& -> RadiciaçAo \nl -> Logaritmo de base 10");
               char opcao = ler.next().charAt(0);
               switch (opcao){
             case '+': 
@@ -42,9 +42,14 @@
             case '&':
                 System.out.println("RadiciaçAo de "+a+ " por "+b+ " = "+(Math.pow(a, 1.0/b)));
                 break;
+            case 'l':
+                System.out.println("Logaritmos de " +a+ " e de "+b+ " são "+Math.log10(a)+" e "+Math.log10(b));
+                break;
             }
             System.out.println("Desejas fazer outra operaçAo? (S/N)");
             repetir = ler.next().charAt(0);
         }
     }
     }
+
+    //Ex: log de a na base b
