@@ -8,21 +8,21 @@
               System.out.println("Informe dois numeros inteiros");
               int a = ler.nextInt();
               int b = ler.nextInt();
-              System.out.println("Qual operação deseja realizar?");
-              System.out.println("+ -> Soma \n- -> SubtraçAo \n* -> MultiplicaçAo \n/ -> DivisAo \n% -> Resto \nr -> DivisAo Real \n@ -> Valor Absoluto \n^ -> PotenciaçAo \n& -> RadiciaçAo \nl -> Logaritmo de base 10");
+              System.out.println("Que operacAo deseja realizar?");
+              System.out.println("+ -> Soma \n- -> SubtracAo \n* -> MultiplicacAo \n/ -> DivisAo \n% -> Resto \nr -> DivisAo Real \n@ -> Valor Absoluto \n^ -> PotenciacAo \n& -> RadiciacAo \nl -> Logaritmo de base 10\nb -> Logaritmo de A na base B\n");
               char opcao = ler.next().charAt(0);
               switch (opcao){
             case '+': 
                 System.out.println("soma = "+(a+b));
                 break;
             case '-':
-                System.out.println("SubtraçAo = "+(a-b));
+                System.out.println("SubtracAo = "+(a-b));
                 break;
             case '*':
-                System.out.println("MultiplicaçAo = "+(a*b));
+                System.out.println("MultiplicacAo = "+(a*b));
                 break;
             case '/':
-                System.out.println("DivsAo de "+a+" sobre "+b+" = "+(a/b));
+                System.out.println("DivisAo de "+a+" sobre "+b+" = "+(a/b));
                 break;
             case '%':
                 System.out.println("Resto da divsAo de "+a+" sobre "+b+" = "+(a%b));
@@ -31,25 +31,28 @@
                 System.out.println ("OPÇÃO INVALIDADA!");
                 break;
             case 'r':
-                System.out.println("DivsAo real de "+a+" sobre "+b+" = "+((float)a/b));
+                System.out.println("DivisAo real de "+a+" sobre "+b+" = "+((float)a/b));
                 break;
             case '@':
                 System.out.println("Valor absoluto de "+(a-b)+" = "+(Math.abs(a-b)));
                 break;
             case '^':
-                System.out.println("PotenciaçAo de "+a+ "^"+b+ " = "+(Math.pow(a, b)));
+                System.out.println("PotenciacAo de "+a+ "^"+b+ " = "+(Math.pow(a, b)));
                 break;
             case '&':
-                System.out.println("RadiciaçAo de "+a+ " por "+b+ " = "+(Math.pow(a, 1.0/b)));
+                System.out.println("RadiciacAo de "+a+ " por "+b+ " = "+(Math.pow(a, 1.0/b)));
                 break;
             case 'l':
-                System.out.println("Logaritmos de " +a+ " e de "+b+ " são "+Math.log10(a)+" e "+Math.log10(b));
+                //System.out.println("Logaritmos de " +a+ " e de "+b+ " sAo, respectivamente, "+Math.log10(a)+" e "+Math.log10(b));
+                System.out.printf("Logaritmos de A e de B sAo, respectivamente, %.2f e %.2f\n",Math.log10(a),Math.log10(b));
                 break;
+            case 'b':
+            double logA = Math.log10(a);
+            double logB = Math.log10(b);
+                System.out.printf("Logaritmo de A na base B = %.2f \n", logA/logB);            
             }
             System.out.println("Desejas fazer outra operaçAo? (S/N)");
             repetir = ler.next().charAt(0);
         }
     }
     }
-
-    //Ex: log de a na base b
