@@ -4,12 +4,12 @@
     	public static void main(String[] args) {
             Scanner ler = new Scanner (System.in);
             char repetir = 'S';
-            while (repetir == 'S' || repetir == 's') {
+            principal:while (true) {
               System.out.println("Informe dois numeros inteiros");
               int a = ler.nextInt();
               int b = ler.nextInt();
               System.out.println("Que operacAo deseja realizar?");
-              System.out.println("+ -> Soma \n- -> SubtracAo \n* -> MultiplicacAo \n/ -> DivisAo \n% -> Resto \nr -> DivisAo Real \n@ -> Valor Absoluto \n^ -> PotenciacAo \n& -> RadiciacAo \nl -> Logaritmo de base 10\nb -> Logaritmo de A na base B\n");
+              System.out.println("+ -> Soma \n- -> SubtracAo \n* -> MultiplicacAo \n/ -> DivisAo \n% -> Resto \nr -> DivisAo Real \n@ -> Valor Absoluto \n^ -> PotenciacAo \n& -> RadiciacAo \nl -> Logaritmo de base 10\nb -> Logaritmo de A na base B\nS -> Sair\n");
               char opcao = ler.next().charAt(0);
               switch (opcao){
             case '+': 
@@ -50,9 +50,12 @@
             double logA = Math.log10(a);
             double logB = Math.log10(b);
                 System.out.printf("Logaritmo de A na base B = %.2f \n", logA/logB);            
+            case 's':
+                System.out.printf("VocE escolheu sair do sistema\n");
+                break principal;
+                
             }
-            System.out.println("Desejas fazer outra operaçAo? (S/N)");
-            repetir = ler.next().charAt(0);
+            
         }
     }
     }
