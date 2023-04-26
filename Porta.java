@@ -1,7 +1,7 @@
 public class Porta{
 	String cor;
 	String material;
-	double' comprimento;
+	double comprimento;
 	double largura;
 	boolean fechada = true;
 	public void abrir(){
