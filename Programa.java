@@ -1,33 +1,38 @@
 public class Programa {
     public static void main(String[] args) {
-        Conta cezar = new Conta();
-        cezar.numAgencia = "11777";
-        cezar.numConta = "00001";
-        cezar.nomePessoa = "Cezar";
-        cezar.saldo = 1000;
+        Cliente cezar = new Cliente();
+        cezar.nome = "Cezar";
+        cezar.cpf = "777.777.777-77";
+        cezar.endereco = "Rua Poo";
 
-        System.out.println(cezar.getRealatorio());
 
-        if (cezar.sacar(500)){
+        Conta contaCezar = new Conta();
+        contaCezar.cliente = cezar;
+        contaCezar.numAgencia = "11777";
+        contaCezar.numConta = "00001";
+        contaCezar.saldo = 1000;
+
+        System.out.println(contaCezar.getRealatorio());
+
+        if (contaCezar.sacar(500)){
             System.out.println("Saque realizado!");
         }else{
             System.out.println("Saque não realizado!");
         }
 
-        System.out.println("\nRelatório após saque: "+cezar.getRealatorio());
+        System.out.println("\nRelatório após saque: "+contaCezar.getRealatorio());
 
-        cezar.depositar(300);
+        contaCezar.depositar(300);
 
-        System.out.println("\nRelatório após depósito: "+cezar.getRealatorio());
+        System.out.println("\nRelatório após depósito: "+contaCezar.getRealatorio());
 
-        Conta elen = new Conta();
-        elen.numAgencia = "11777";
-        elen.numConta = "00012";
-        elen.nomePessoa = "Elen";
-        elen.saldo = 2109;
+        Conta contaElen = new Conta();
+        contaElen.numAgencia = "11777";
+        contaElen.numConta = "00012";
+        contaElen.saldo = 2109;
 
-        cezar.transferir(100,elen);
+        contaCezar.transferir(100,contaElen);
 
-        System.out.println("\nRelatório após tranferência: "+cezar.getRealatorio()+elen.getRealatorio());
+        //System.out.println("\nRelatório após tranferência: "+contaCezar.getRealatorio()+contaElen.getRealatorio());
     }
 }

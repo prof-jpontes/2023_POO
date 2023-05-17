@@ -6,13 +6,14 @@ public class Conta {
 
     public String numAgencia;
 
-    public String nomePessoa;
+    public Cliente cliente;
 
     public double saldo;
 
     public String chavePix;
 
     public boolean sacar(double valor) {
+        valor = 1.01 * valor;
       if(valor <= this.saldo){
           this.saldo -= valor;
           return true;
@@ -42,7 +43,7 @@ public class Conta {
         String relatorio = "\n";
         relatorio += "Número da Agência: "+this.numAgencia;
         relatorio += "\nNúmero da Conta: "+this.numConta;
-        relatorio += "\nNome Dono: "+this.nomePessoa;
+        relatorio += "\nCliente: "+this.cliente.getRelatorio();
         relatorio += "\nSaldo: "+this.saldo;
         return relatorio;
     }
