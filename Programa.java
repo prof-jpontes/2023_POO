@@ -26,7 +26,7 @@ public class Programa {
         elen.nomePessoa = "Elen";
         elen.saldo = 2109;
 
-        cezar.transferir(1000,elen);
+        cezar.transferir(100,elen);
 
         System.out.println("\nRelatório após tranferência: "+cezar.getRealatorio()+elen.getRealatorio());
     }
