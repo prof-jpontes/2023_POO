@@ -37,11 +37,8 @@ public class Controle {
     public String listarClientes(){
         String str = "\n";
         for (int k = 0;k < i;k++){
-            str += k + clientes[k].nome;
+            str += k + "-" + clientes[k].nome + "\n";
         }
         return str;
     }
-
-
-
 }
