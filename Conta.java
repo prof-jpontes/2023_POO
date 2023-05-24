@@ -39,7 +39,7 @@ public class Conta {
         return this.transferir(valor,c);
     }
 
-    public String getRealatorio(){
+    public String getRelatorio(){
         String relatorio = "\n";
         relatorio += "Número da Agência: "+this.numAgencia;
         relatorio += "\nNúmero da Conta: "+this.numConta;

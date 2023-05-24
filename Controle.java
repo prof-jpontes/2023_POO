@@ -29,7 +29,7 @@ public class Controle {
     public String getRelatorioContas(){
         String str = "\n";
         for (int k = 0; k < j; k++){
-            str += contas[k].getRealatorio();
+            str += contas[k].getRelatorio();
         }
         return str;
     }
