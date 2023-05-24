@@ -1,6 +1,10 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Controle {
-    Cliente[] clientes = new Cliente[10];
-    Conta[] contas = new Conta[10];
+
+    List<Cliente> listaClientes = new ArrayList<Cliente>();
+    List<Conta> listaContas = new ArrayList<Conta>();
 
     Cliente cliente;
     int i = 0;
@@ -12,7 +16,7 @@ public class Controle {
         cliente.nome = nome;
         cliente.endereco = endereco;
         cliente.cpf = cpf;
-        clientes[i++] = cliente;
+        listaClientes.add(cliente);
 
 
     }
@@ -23,21 +27,21 @@ public class Controle {
         conta.numAgencia = numAgencia;
         conta.saldo = saldo;
         conta.cliente = cliente;
-        contas[j++] = conta;
+        listaContas.add(conta);
     }
 
     public String getRelatorioContas(){
         String str = "\n";
-        for (int k = 0; k < j; k++){
-            str += contas[k].getRelatorio();
+        for (Conta c : listaContas) {
+            str += c.getRelatorio() + "\n";
         }
         return str;
     }
 
     public String listarClientes(){
         String str = "\n";
-        for (int k = 0;k < i;k++){
-            str += k + "-" + clientes[k].nome + "\n";
+        for (int i = 0; i<listaClientes.size();i++) {
+            str += i +"-"+ listaClientes.get(i).nome+"\n";
         }
         return str;
     }

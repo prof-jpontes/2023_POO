@@ -19,7 +19,7 @@ public class Programa {
                     System.out.println(controle.listarClientes());
                     int id = Integer.parseInt(ler.nextLine());
 
-                    controle.cadastrarConta(numConta,numAgencia,saldo,controle.clientes[id]);
+                    controle.cadastrarConta(numConta,numAgencia,saldo,controle.listaClientes.get(id));
                     break;
                 case 3:
                     System.out.printf(controle.getRelatorioContas());
