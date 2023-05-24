@@ -13,7 +13,13 @@ public class Programa {
                     controle.cadastrarCliente(ler.nextLine(),ler.nextLine(),ler.nextLine());
                     break;
                 case 2:
-                    controle.cadastrarConta(ler.nextLine(),ler.nextLine(),Double.parseDouble(ler.nextLine()),controle.clientes[0]);
+                    String numConta = ler.nextLine();
+                    String numAgencia = ler.nextLine();
+                    double saldo = Double.parseDouble(ler.nextLine());
+                    System.out.println(controle.listarClientes());
+                    int id = Integer.parseInt(ler.nextLine());
+
+                    controle.cadastrarConta(numConta,numAgencia,saldo,controle.clientes[id]);
                     break;
                 case 3:
                     System.out.printf(controle.getRelatorioContas());

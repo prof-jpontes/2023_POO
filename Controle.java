@@ -34,4 +34,14 @@ public class Controle {
         return str;
     }
 
+    public String listarClientes(){
+        String str = "\n";
+        for (int k = 0;k < i;k++){
+            str += k + clientes[k].nome;
+        }
+        return str;
+    }
+
+
+
 }
