@@ -25,4 +25,13 @@ public class Controle {
         conta.cliente = cliente;
         contas[j++] = conta;
     }
+
+    public String getRelatorioContas(){
+        String str = "\n";
+        for (int k = 0; k < j; k++){
+            str += contas[k].getRealatorio();
+        }
+        return str;
+    }
+
 }
