@@ -12,6 +12,14 @@ public class Conta {
 
     public String chavePix;
 
+    public Conta(String numConta, String numAgencia){
+
+        this.numConta = numConta;
+        this.numAgencia = numAgencia;
+        this.saldo = 0;
+
+
+    }
     public boolean sacar(double valor) {
         valor = 1.01 * valor;
       if(valor <= this.saldo){

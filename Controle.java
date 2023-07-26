@@ -12,20 +12,14 @@ public class Controle {
 
     Conta conta;
     public void cadastrarCliente(String nome, String cpf, String endereco){
-        cliente = new Cliente();
-        cliente.nome = nome;
-        cliente.endereco = endereco;
+        cliente = new Cliente(nome, endereco);
         cliente.cpf = cpf;
         listaClientes.add(cliente);
 
-
     }
 
-    public void cadastrarConta (String numConta, String numAgencia, double saldo, Cliente cliente){
-        conta = new Conta();
-        conta.numConta = numConta;
-        conta.numAgencia = numAgencia;
-        conta.saldo = saldo;
+    public void cadastrarConta (String numConta, String numAgencia, Cliente cliente){
+        conta = new Conta(numConta,numAgencia);
         conta.cliente = cliente;
         listaContas.add(conta);
     }

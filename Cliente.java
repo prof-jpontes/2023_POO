@@ -5,6 +5,12 @@ public class Cliente {
 
     public String endereco;
 
+    public Cliente(String nome, String cpf){
+
+        this.nome = nome;
+        this.cpf = cpf;
+
+    }
     public String getRelatorio(){
         String str = "\n";
         str += "Nome: "+this.nome;
